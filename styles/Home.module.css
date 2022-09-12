@@ -51,7 +51,6 @@
 }
 
 .description {
-  margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -137,4 +136,13 @@
 }
 .mainnav ul li{
   margin-inline: 12px;
+}
+
+.myimg{
+  border: #c82222;
+  border-radius: 15px;
+  margin-top: 10px important;
+}
+.imgwarp{
+  margin-top: 25px;
 }
