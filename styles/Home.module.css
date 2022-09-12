@@ -127,3 +127,14 @@
     filter: invert(1);
   }
 }
+
+.mainnav ul{
+  display:flex;
+  justify-content: center;
+  margin-top: 25px;
+  font-family: monospace;
+  font-size: large;
+}
+.mainnav ul li{
+  margin-inline: 12px;
+}
