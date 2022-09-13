@@ -32,7 +32,7 @@ export default function Home() {
 
         <p className={styles.description}>A Blog For Coder By A Coder !</p>
 
-        <div className="blogs">
+        <div className={styles.container}>
           <span className="myspan"> <h2>LATEST BLOG POST</h2> </span>
 
           <div className="blogItem">
