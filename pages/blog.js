@@ -6,20 +6,21 @@ import { useEffect, useState } from "react";
 
 // Step 1 : Collect all the files from blogdata directory
 
-const blog = () => {
-  const [blogs, setBlogs] = useState([]);
+const blog = (props) => {
+  console.log(props);
+  const [blogs, setBlogs] = useState(props.allBlogs);
 
-  useEffect(() => {
-    //console.log("use effect is runing");
-    fetch("http://localhost:3000/api/blogs")
-      .then((a) => {
-        return a.json();
-      })
-      .then((parsed) => {
-        //console.log(parsed);
-        setBlogs(parsed);
-      });
-  }, []);
+  // useEffect(() => {
+  //   //console.log("use effect is runing");
+  //   fetch("http://localhost:3000/api/blogs")
+  //     .then((a) => {
+  //       return a.json();
+  //     })
+  //     .then((parsed) => {
+  //       //console.log(parsed);
+  //       setBlogs(parsed);
+  //     });
+  // }, []);
 
   return (
     <div className={styles.container}>
@@ -41,5 +42,15 @@ const blog = () => {
     </div>
   );
 };
+
+export async function getServerSideProps(context) {
+  let data = await fetch("http://localhost:3000/api/blogs")
+  let allBlogs = await data.json()
+  return {
+    
+    props: {allBlogs},
+    // will be passed to the page component as props
+  }
+}
 
 export default blog;
