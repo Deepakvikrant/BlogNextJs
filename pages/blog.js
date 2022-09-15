@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -10,13 +10,13 @@ const blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    console.log("use effect is runing");
+    //console.log("use effect is runing");
     fetch("http://localhost:3000/api/blogs")
       .then((a) => {
         return a.json();
       })
       .then((parsed) => {
-        console.log(parsed);
+        //console.log(parsed);
         setBlogs(parsed);
       });
   }, []);
