@@ -114,7 +114,6 @@ const Contact = () => {
               onChange={handleChange}
               className={styles.input}
               rows={4}
-              column
             />
 
             <div id="textHelp" className="form-text"></div>

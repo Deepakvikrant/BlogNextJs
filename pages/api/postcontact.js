@@ -5,9 +5,9 @@ export default async function handler(req, res) {
       // Process a POST request
       //console.log(req.body);
       let data = await fs.promises.readdir('contactdata');
-      console.log(data);
+      //console.log(data);
 
-      console.log(req.body);
+      //console.log(req.body);
 
       const data2 = req.body
 

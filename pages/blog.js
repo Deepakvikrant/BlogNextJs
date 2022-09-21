@@ -8,7 +8,7 @@ import * as fs from 'fs'
 // Step 1 : Collect all the files from blogdata directory
 
 const blog = (props) => {
-  console.log(props);
+  //console.log(props);
   const [blogs, setBlogs] = useState(props.allBlogs);
 
   // useEffect(() => {
@@ -33,7 +33,7 @@ const blog = (props) => {
               <Link href={`/blogpost/${blogItem.slug}`}>
                 <h2 className={styles.blogItemh3}>{blogItem.title}</h2>
               </Link>
-              <p className={styles.blogItem} >{blogItem.metadesc.substr(0,400)}</p>
+              <p className={styles.blogItem} >{blogItem.content.substr(0,180)}</p>
               <button className={styles.btn}>read more</button>
             </div>
           );
@@ -52,7 +52,7 @@ export async function getStaticProps(context) {
 
   for (let index = 0; index < data.length; index++) {
       const item = data[index];
-      console.log(item);
+      //console.log(item);
       myfile = await fs.promises.readFile(("blogdata/" + item), 'utf-8')
       //console.log(myfile);
       allBlogs.push(JSON.parse(myfile))

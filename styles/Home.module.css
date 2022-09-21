@@ -160,3 +160,10 @@
   cursor: pointer;
   font-size: 12px;
 }
+
+@media only screen and (max-width: 600px) {
+  .mainnav ul li{
+    margin-inline: 12px;
+  }
+  
+}
