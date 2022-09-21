@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/contact.module.css";
+import styles from "../styles/Contact.module.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -11,7 +11,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(phone, email, name, description);
 
-    const data = {phone, email, name, description};
+    const data = { phone, email, name, description };
 
     fetch("http://localhost:3000/api/postcontact", {
       method: "POST", // or 'PUT'
@@ -52,63 +52,67 @@ const Contact = () => {
 
       <div>
         <form onSubmit={handleSubmit}>
-          <div className="{styles.mb3}">
+          <div className={styles.mb3}>
             <label htmlFor="name" className={styles.formLebel}>
               Enter Your Name
             </label>
             <input
+              min={3} required
               name="name"
               value={name}
               onChange={handleChange}
               type="text"
-              className="form-control"
+              className={styles.input}
               id="name"
               aria-describedby="textHelp"
             />
             <div id="textHelp" className="form-text"></div>
           </div>
 
-          <div className="{styles.mb3}">
+          <div className={styles.mb3}>
             <label htmlFor="exampleInputEmail1" className={styles.formLebel}>
               Email address
             </label>
             <input
+              min={3} required
               name="email"
               onChange={handleChange}
               value={email}
               type="email"
-              className="form-control"
+              className={styles.input}
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
             <div id="emailHelp" className="form-text"></div>
           </div>
 
-          <div className="{styles.mb3}">
+          <div className={styles.mb3}>
             <label htmlFor="phone" className={styles.formLebel}>
               Enter Your Phone
             </label>
             <input
+              min={3} required
               name="phone"
               onChange={handleChange}
               value={phone}
               type="text"
-              className="form-control"
+              className={styles.input}
               id="name"
               aria-describedby="numberHelp"
             />
             <div id="emailHelp" className="form-text"></div>
           </div>
 
-          <div className="{styles.mb3}">
+          <div className={styles.mb3}>
             <label htmlFor="description" className={styles.formLebel}>
               Description
             </label>
             <textarea
+              min={10} required
               name="description"
               value={description}
               onChange={handleChange}
-              className="form-control"
+              className={styles.input}
               rows={4}
               column
             />
@@ -116,7 +120,7 @@ const Contact = () => {
             <div id="textHelp" className="form-text"></div>
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className={styles.btn}>
             Submit
           </button>
         </form>

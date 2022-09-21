@@ -6,9 +6,31 @@
 
 .mb3{
     margin-bottom:21px;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .formLebel{
-   margin: 0px 14px; 
+   margin: 0px 0px;
+   padding: 7px;
+
 }
+
+.input{
+    padding: 4px;
+    border: 4px solid #080808;
+    border-radius: 10px;
+    margin-left: px;
+    font-size: 16px;
+    background-color: rgb(90, 96, 96);
+}
+
+.btn{
+    background-color:rebeccapurple;
+    padding: 8px 10px;
+    border-radius:10px;
+    cursor: pointer;
+    font-size: 12px;
+
+  }

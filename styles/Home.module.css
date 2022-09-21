@@ -42,7 +42,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title,
@@ -52,7 +52,8 @@
 
 .description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  max-width: 70vw;
 }
 
 .code {
@@ -139,10 +140,23 @@
 }
 
 .myimg{
-  border: #c82222;
+  border: hwb(0 13% 21%);
   border-radius: 15px;
   margin-top: 10px important;
 }
 .imgwarp{
   margin-top: 25px;
+}
+.latest{
+  color: rebeccapurple;
+  font-size: 25px;
+  text-align: center;
+}
+
+.btn{
+  background-color:rebeccapurple;
+  padding: 8px 10px;
+  border-radius:25px;
+  cursor: pointer;
+  font-size: 12px;
 }

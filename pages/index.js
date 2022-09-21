@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import styles from "../styles/Home.module.css";
 
 
@@ -8,14 +7,6 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-
-      <style jsx>
-        {`
-        .myspan{
-          color :red;
-        }
-        `}
-      </style>
 
       <Head>
         <title>My Blog</title>
@@ -32,46 +23,42 @@ export default function Home() {
         <img className={styles.myimg} src="/home.webp" alt="img" width={257} height={150} />
         </div>
 
-        <p className={styles.description}>A Blog For Coder By A Coder !</p>
+        <p className={styles.description}>A Blog For Coder By A Coder ! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi a tenetur, soluta exercitationem doloribus iure facilis deleniti natus, recusandae quos inventore est eligendi nam reiciendis, vitae architecto dolorum ipsum magni.</p>
 
         <div className={styles.container}>
-          <span className="myspan"> <h2>LATEST BLOG POST</h2> </span>
+          <h2 className={styles.latest}>LATEST BLOG POST</h2>
 
-          <div className="blogItem">
+          <div className={styles.blogItem}>
             <h3>How to learn javaScript in 2022</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
               tempore aspernatur iure iusto reprehenderit earum reiciendis
               dignissimos sapiente at quia expedita eum hic impedit dolore
               tenetur aut, delectus, fuga tempora? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Iste deserunt neque aliquam qui
-              libero, quis doloremque suscipit impedit a minus incidunt quisquam
-              eaque tenetur quas at exercitationem laboriosam nam. Natus.
+
             </p>
+            <button className={styles.btn}>read more</button>
           </div>
-          <div className="blogItem">
+          <div className={styles.blogItem}>
             <h3>How to learn javaScript in 2022</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
               tempore aspernatur iure iusto reprehenderit earum reiciendis
               dignissimos sapiente at quia expedita eum hic impedit dolore
               tenetur aut, delectus, fuga tempora? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Iste deserunt neque aliquam qui
-              libero, quis doloremque suscipit impedit a minus incidunt quisquam
-              eaque tenetur quas at exercitationem laboriosam nam. Natus.
+  
             </p>
+            <button className={styles.btn}>read more</button>
           </div>
-          <div className="blogItem">
+          <div className={styles.blogItem}>
             <h3>How to learn javaScript in 2022</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
               tempore aspernatur iure iusto reprehenderit earum reiciendis
               dignissimos sapiente at quia expedita eum hic impedit dolore
               tenetur aut, delectus, fuga tempora? Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Iste deserunt neque aliquam qui
-              libero, quis doloremque suscipit impedit a minus incidunt quisquam
-              eaque tenetur quas at exercitationem laboriosam nam. Natus.
             </p>
+            <button className={styles.btn}>read more</button>
           </div>
         </div>
       </main>

@@ -1,0 +1,8 @@
+.container {
+    max-width: 55vw;
+    margin: auto;
+  }
+  .center{
+    text-align: center;
+    margin: 50px;
+  }

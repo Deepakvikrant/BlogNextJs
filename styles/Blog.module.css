@@ -147,3 +147,10 @@
   margin-top: 25px;
 }
 
+.btn{
+  background-color:rebeccapurple;
+  padding: 8px 10px;
+  border-radius:25px;
+  cursor: pointer;
+  font-size: 12px;
+}

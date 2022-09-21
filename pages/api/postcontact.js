@@ -6,7 +6,12 @@ export default async function handler(req, res) {
       //console.log(req.body);
       let data = await fs.promises.readdir('contactdata');
       console.log(data);
-      fs.promises.writeFile(`contactdata/${data.length+1}.json`, JSON.stringify(req.body), ()=>{})
+
+      console.log(req.body);
+
+      const data2 = req.body
+
+      fs.promises.writeFile(`contactdata/${data.length+1}.json`, JSON.stringify(data2), ()=>{})
       res.status(200).json(req);
      
       

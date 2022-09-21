@@ -34,6 +34,7 @@ const blog = (props) => {
                 <h2 className={styles.blogItemh3}>{blogItem.title}</h2>
               </Link>
               <p className={styles.blogItem} >{blogItem.metadesc.substr(0,400)}</p>
+              <button className={styles.btn}>read more</button>
             </div>
           );
         })}
