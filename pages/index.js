@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 
+
 export default function Home() {
 
 
@@ -39,6 +40,7 @@ export default function Home() {
             </p>
             <button className={styles.btn}>read more</button>
           </div>
+
           <div className={styles.blogItem}>
             <h3>How to learn javaScript in 2022</h3>
             <p>

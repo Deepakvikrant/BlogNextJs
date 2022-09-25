@@ -137,6 +137,7 @@
 }
 .mainnav ul li{
   margin-inline: 12px;
+  display: flex;
 }
 
 .myimg{

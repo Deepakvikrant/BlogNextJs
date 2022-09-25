@@ -30,7 +30,7 @@ const blog = (props) => {
         {blogs.map((blogItem) => {
           return (
             <div key={blogItem.slug}>
-              <Link href={`/blogpost/${blogItem.slug}`}>
+              <Link className={styles.Link} href={`/blogpost/${blogItem.slug}`}>
                 <h2 className={styles.blogItemh3}>{blogItem.title}</h2>
               </Link>
               <p className={styles.blogItem} >{blogItem.content.substr(0,180)}</p>
